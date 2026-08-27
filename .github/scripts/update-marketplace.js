@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * Scans the `plugins/` folder for plugin.json files and regenerates
+ * Scans the `plugins/` folder for plugin manifests and regenerates
  * marketplace.json files with an up-to-date `plugins` list, preserving
  * the existing marketplace metadata (name, metadata, owner).
  */
-const fs = require("fs");
-const path = require("path");
+const fs = require("node:fs");
+const path = require("node:path");
 
 const repoRoot = path.resolve(__dirname, "..", "..");
 const pluginsDir = path.join(repoRoot, "plugins");
@@ -18,7 +18,8 @@ function findPluginJsonFiles(dir) {
   const results = [];
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (!entry.isDirectory()) continue;
-    const pluginJsonPath = path.join(dir, entry.name, "plugin.json");
+    const pluginDir = path.join(dir, entry.name);
+    const pluginJsonPath = path.join(pluginDir, "plugin.json");
     if (fs.existsSync(pluginJsonPath)) {
       results.push({ dir: entry.name, file: pluginJsonPath });
     }
@@ -37,7 +38,7 @@ marketplace.plugins = pluginEntries.map(({ dir, file }) => {
   const plugin = loadJson(file);
   return {
     name: plugin.name,
-    source: `plugins/${dir}`,
+    source: `./plugins/${dir}`,
     version: plugin.version,
     description: plugin.description,
   };

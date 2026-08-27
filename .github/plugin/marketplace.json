@@ -10,7 +10,7 @@
     "plugins": [
         {
             "name": "rvo-documentation",
-            "source": "plugins/rvo-documentation",
+            "source": "./plugins/rvo-documentation",
             "version": "1.0.0",
             "description": "plugin provides skills for managing documentation with AI"
         }
