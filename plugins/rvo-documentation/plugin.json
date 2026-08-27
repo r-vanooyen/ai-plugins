@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rvo-documentation",
+  "version": "1.0.0",
+  "description": "plugin provides skills for managing documentation with AI",
+  "keywords": ["documentation"],
+  "author": {
+    "name": "Robin van Ooyen"
+  }
+}

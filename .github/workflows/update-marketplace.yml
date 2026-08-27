@@ -1,0 +1,34 @@
+name: Update marketplace.json
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "plugins/**/plugin.json"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-marketplace:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update marketplace.json
+        run: node .github/scripts/update-marketplace.js
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- .github/plugin/marketplace.json .claude-plugin/marketplace.json; then
+            echo "No changes to marketplace.json"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/plugin/marketplace.json .claude-plugin/marketplace.json
+          git commit -m "chore: update marketplace.json"
+          git push
