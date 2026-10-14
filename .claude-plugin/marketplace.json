@@ -9,6 +9,18 @@
     },
     "plugins": [
         {
+            "name": "rvo-ai-development",
+            "source": "./plugins/rvo-ai-development",
+            "version": "1.0.0",
+            "description": "Skills for creating AI plugins"
+        },
+        {
+            "name": "rvo-coding-knowhow",
+            "source": "./plugins/rvo-coding-knowhow",
+            "version": "1.0.0",
+            "description": "Personal coding know-how and preferred standards for tools and frameworks"
+        },
+        {
             "name": "rvo-documentation",
             "source": "./plugins/rvo-documentation",
             "version": "1.0.0",

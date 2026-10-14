@@ -52,6 +52,9 @@ Das Plugin verwendet das offene `agent-plugins.org`-Manifest. Eine
 
 - **rvo-ai-development** — a `create-ai-plugin` skill with short instructions for
   creating portable plugins using the [Agent Plugins standard](https://agent-plugins.org).
+- **rvo-coding-knowhow** — personal coding know-how and preferred standards for
+  tools and frameworks, starting with `git-cleanup-branches` for approval-based
+  cleanup using Git merge ancestry and GitHub pull request metadata.
 - **rvo-documentation** — skills for documentation, architecture reviews,
   traceability, and Structurizr.
 
