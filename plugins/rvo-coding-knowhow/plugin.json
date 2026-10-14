@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rvo-coding-knowhow",
+  "version": "1.0.0",
+  "description": "Personal coding know-how and preferred standards for tools and frameworks",
+  "keywords": ["coding", "standards", "tools", "frameworks"],
+  "author": {
+    "name": "Robin van Ooyen"
+  }
+}
