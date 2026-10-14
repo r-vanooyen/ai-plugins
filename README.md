@@ -2,7 +2,7 @@
 
 This repository contains custom AI skills by Robin van Ooyen. The skills are
 reusable instructions that extend an AI assistant with focused capabilities,
-currently centered on documentation and architecture work.
+covering documentation, architecture, and AI plugin development.
 
 ## Installation
 
@@ -50,6 +50,8 @@ Das Plugin verwendet das offene `agent-plugins.org`-Manifest. Eine
 
 ## Available plugin
 
+- **rvo-ai-development** — a `create-ai-plugin` skill with short instructions for
+  creating portable plugins using the [Agent Plugins standard](https://agent-plugins.org).
 - **rvo-documentation** — skills for documentation, architecture reviews,
   traceability, and Structurizr.
 

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rvo-ai-development",
+  "version": "1.0.0",
+  "description": "Skills for creating AI plugins",
+  "keywords": ["ai-development", "plugins"],
+  "author": {
+    "name": "Robin van Ooyen"
+  }
+}

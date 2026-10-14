@@ -9,6 +9,12 @@
     },
     "plugins": [
         {
+            "name": "rvo-ai-development",
+            "source": "./plugins/rvo-ai-development",
+            "version": "1.0.0",
+            "description": "Skills for creating AI plugins"
+        },
+        {
             "name": "rvo-documentation",
             "source": "./plugins/rvo-documentation",
             "version": "1.0.0",
